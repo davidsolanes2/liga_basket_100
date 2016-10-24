@@ -7,17 +7,12 @@ package com.example.Repository;
 
 import com.example.Model.Jugador;
 import com.example.Model.Posicion;
-import org.hibernate.sql.Select;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
-import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
 import java.time.LocalDate;
 import java.util.List;
-import java.util.Objects;
 
 
 @Repository
@@ -28,6 +23,8 @@ public interface JugadorRepository extends JpaRepository<Jugador, Long> {
     List<Jugador>findByNumAsistenciasBetween(int minnumAsistencias, int maxnumAsistencias);
     List<Jugador>findByPosicionIs(Posicion posicion);
     List<Jugador>findByFechaNacimientoBefore(LocalDate fechaNacimiento);
+
+    List<Jugador> findByEquipoNombreEquipo(String nombre);
 
     @Query("select avg(jug.numCanastas), avg(jug.numAsistencias), avg(jug.numRebotes), jug.posicion from Jugador jug group by jug.posicion")
     List<Object[]>findByMedia();

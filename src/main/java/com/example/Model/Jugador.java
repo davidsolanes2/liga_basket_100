@@ -30,7 +30,7 @@ public class Jugador {
     @ManyToOne
     private Equipo equipo;
 
-    @Enumerated
+    @Enumerated(EnumType.STRING)
     private Posicion posicion;
 
     public Jugador(){}

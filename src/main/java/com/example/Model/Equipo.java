@@ -30,10 +30,11 @@ public class Equipo {
     @Column(name = "fecha_creacion")
     private LocalDate fechaCreacion;
 
+    /*
     @OneToMany(mappedBy = "equipo")
-    private Set<Jugador> jugadores = new HashSet<>();
+    private Set<Jugador> jugador = new HashSet<>();*/
 
-    @JsonIgnore
+    //@JsonIgnore
     //@ManyToMany(mappedBy = "equipos")
     //private Set<Temporada> temporadas = new HashSet<>();
 
@@ -72,7 +73,18 @@ public class Equipo {
         this.localidad = localidad;
     }
 
-    public LocalDate getFechaCreacion() { return fechaCreacion; }
+    public LocalDate getFechaCreacion() {
+        return fechaCreacion;
+    }
+
+    public void setFechaCreacion(LocalDate fechaCreacion) {
+        this.fechaCreacion = fechaCreacion;
+    }
+
+    /*public Set<Jugador>getJugador() { return jugador; }
+
+    public void setJugador(Set<Jugador> jugador) { this.jugador = jugador; }
+*/
 
     @Override
     public boolean equals(Object o) {
@@ -95,11 +107,13 @@ public class Equipo {
     }
 
     @Override
-    public  String toString(){
+    public String toString() {
         return "Equipo{" +
                 "id=" + id +
-                ", nombreEquipo='" + nombreEquipo + "'" +
-                ", fechaCreacion='" + fechaCreacion + "'" +
+                ", nombreEquipo='" + nombreEquipo + '\'' +
+                ", nombreEstadio='" + nombreEstadio + '\'' +
+                ", localidad='" + localidad + '\'' +
+                ", fechaCreacion=" + fechaCreacion +
                 '}';
     }
 }

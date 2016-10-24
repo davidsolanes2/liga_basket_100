@@ -28,7 +28,7 @@ public class JugadorService {
     @Autowired
     private EquipoRepository equipoRepository;
 
-    public JugadorService testJugador() {
+    public void crearJugador(){
 
         Jugador jugador1 = new Jugador();
         jugador1.setNombreJugador("Justin");
@@ -42,7 +42,7 @@ public class JugadorService {
 
         Jugador jugador2 = new Jugador();
         jugador2.setNombreJugador("Pau");
-        jugador2.setFechaNacimiento(LocalDate.of(1994,7,31));
+        jugador2.setFechaNacimiento(LocalDate.of(1994, 7, 31));
         jugador2.setNumAsistencias(25);
         jugador2.setNumCanastas(35);
         jugador2.setNumRebotes(15);
@@ -52,7 +52,7 @@ public class JugadorService {
 
         Jugador jugador3 = new Jugador();
         jugador3.setNombreJugador("Shane");
-        jugador3.setFechaNacimiento(LocalDate.of(1994,3,9));
+        jugador3.setFechaNacimiento(LocalDate.of(1994, 3, 9));
         jugador3.setNumAsistencias(27);
         jugador3.setNumCanastas(32);
         jugador3.setNumRebotes(18);
@@ -62,7 +62,7 @@ public class JugadorService {
 
         Jugador jugador4 = new Jugador();
         jugador4.setNombreJugador("Demond");
-        jugador4.setFechaNacimiento(LocalDate.of(1993,7,19));
+        jugador4.setFechaNacimiento(LocalDate.of(1993, 7, 19));
         jugador4.setNumAsistencias(29);
         jugador4.setNumCanastas(38);
         jugador4.setNumRebotes(20);
@@ -72,7 +72,7 @@ public class JugadorService {
 
         Jugador jugador5 = new Jugador();
         jugador5.setNombreJugador("Albert");
-        jugador5.setFechaNacimiento(LocalDate.of(1993,7,19));
+        jugador5.setFechaNacimiento(LocalDate.of(1993, 7, 19));
         jugador5.setNumAsistencias(39);
         jugador5.setNumCanastas(40);
         jugador5.setNumRebotes(28);
@@ -82,7 +82,7 @@ public class JugadorService {
 
         Jugador jugador6 = new Jugador();
         jugador6.setNombreJugador("Sergi");
-        jugador6.setFechaNacimiento(LocalDate.of(1993,7,19));
+        jugador6.setFechaNacimiento(LocalDate.of(1993, 7, 19));
         jugador6.setNumAsistencias(39);
         jugador6.setNumCanastas(40);
         jugador6.setNumRebotes(28);
@@ -92,7 +92,7 @@ public class JugadorService {
 
         Jugador jugador7 = new Jugador();
         jugador7.setNombreJugador("Rudy");
-        jugador7.setFechaNacimiento(LocalDate.of(1993,7,19));
+        jugador7.setFechaNacimiento(LocalDate.of(1993, 7, 19));
         jugador7.setNumAsistencias(39);
         jugador7.setNumCanastas(40);
         jugador7.setNumRebotes(28);
@@ -102,7 +102,7 @@ public class JugadorService {
 
         Jugador jugador8 = new Jugador();
         jugador8.setNombreJugador("Andres");
-        jugador8.setFechaNacimiento(LocalDate.of(1993,7,19));
+        jugador8.setFechaNacimiento(LocalDate.of(1993, 7, 19));
         jugador8.setNumAsistencias(39);
         jugador8.setNumCanastas(40);
         jugador8.setNumRebotes(28);
@@ -112,7 +112,7 @@ public class JugadorService {
 
         Jugador jugador9 = new Jugador();
         jugador9.setNombreJugador("Jonas");
-        jugador9.setFechaNacimiento(LocalDate.of(1993,7,19));
+        jugador9.setFechaNacimiento(LocalDate.of(1993, 7, 19));
         jugador9.setNumAsistencias(39);
         jugador9.setNumCanastas(40);
         jugador9.setNumRebotes(28);
@@ -121,8 +121,8 @@ public class JugadorService {
         jugadorRepository.save(jugador9);
 
         Jugador jugador10 = new Jugador();
-        jugador10.setNombreJugador("Daniel_06");
-        jugador10.setFechaNacimiento(LocalDate.of(1993,7,19));
+        jugador10.setNombreJugador("Linhart, Nate");
+        jugador10.setFechaNacimiento(LocalDate.of(1993, 7, 19));
         jugador10.setNumAsistencias(39);
         jugador10.setNumCanastas(40);
         jugador10.setNumRebotes(28);
@@ -131,8 +131,8 @@ public class JugadorService {
         jugadorRepository.save(jugador10);
 
         Jugador jugador11 = new Jugador();
-        jugador11.setNombreJugador("Daniel_05");
-        jugador11.setFechaNacimiento(LocalDate.of(1993,7,19));
+        jugador11.setNombreJugador("Henri, Sek");
+        jugador11.setFechaNacimiento(LocalDate.of(1993, 7, 19));
         jugador11.setNumAsistencias(39);
         jugador11.setNumCanastas(40);
         jugador11.setNumRebotes(28);
@@ -141,8 +141,8 @@ public class JugadorService {
         jugadorRepository.save(jugador11);
 
         Jugador jugador12 = new Jugador();
-        jugador12.setNombreJugador("Daniel_01");
-        jugador12.setFechaNacimiento(LocalDate.of(1993,7,19));
+        jugador12.setNombreJugador("Romera, Pedro");
+        jugador12.setFechaNacimiento(LocalDate.of(1993, 7, 19));
         jugador12.setNumAsistencias(39);
         jugador12.setNumCanastas(40);
         jugador12.setNumRebotes(28);
@@ -151,8 +151,8 @@ public class JugadorService {
         jugadorRepository.save(jugador12);
 
         Jugador jugador13 = new Jugador();
-        jugador13.setNombreJugador("Daniel_02");
-        jugador13.setFechaNacimiento(LocalDate.of(1993,7,19));
+        jugador13.setNombreJugador("Pumprla, Pavel");
+        jugador13.setFechaNacimiento(LocalDate.of(1993, 7, 19));
         jugador13.setNumAsistencias(39);
         jugador13.setNumCanastas(40);
         jugador13.setNumRebotes(28);
@@ -161,8 +161,8 @@ public class JugadorService {
         jugadorRepository.save(jugador13);
 
         Jugador jugador14 = new Jugador();
-        jugador14.setNombreJugador("Daniel_03");
-        jugador14.setFechaNacimiento(LocalDate.of(1993,7,19));
+        jugador14.setNombreJugador("Kendall, Levon");
+        jugador14.setFechaNacimiento(LocalDate.of(1993, 7, 19));
         jugador14.setNumAsistencias(39);
         jugador14.setNumCanastas(40);
         jugador14.setNumRebotes(28);
@@ -171,8 +171,8 @@ public class JugadorService {
         jugadorRepository.save(jugador14);
 
         Jugador jugador15 = new Jugador();
-        jugador15.setNombreJugador("Daniel_04");
-        jugador15.setFechaNacimiento(LocalDate.of(1993,7,19));
+        jugador15.setNombreJugador("Fernandez, Jaime");
+        jugador15.setFechaNacimiento(LocalDate.of(1993, 7, 19));
         jugador15.setNumAsistencias(39);
         jugador15.setNumCanastas(40);
         jugador15.setNumRebotes(28);
@@ -180,6 +180,9 @@ public class JugadorService {
         jugador15.setEquipo(equipoRepository.findByNombreEquipo("Movistar Estudiantes"));
         jugadorRepository.save(jugador15);
 
+    }
+
+    public void testJugador(){
         /* --------------------------------------------------------------------------------------------------------- */
 
         //a. buscar jugadores por el nombre, de manera que no sea necesario introducir el nombre completo
@@ -192,7 +195,7 @@ public class JugadorService {
 
         //c. buscar jugadores que hayan efectuado un numero de asistencias dentro de un rango especificado como parametro
 
-        System.out.println(jugadorRepository.findByNumAsistenciasBetween(5,10));
+        System.out.println(jugadorRepository.findByNumAsistenciasBetween(5,40));
 
         //d. buscar jugadores que pertenezcan a una posicion especifica, por ejemplo base
 
@@ -200,7 +203,7 @@ public class JugadorService {
 
         //e. buscar jugadores que hayan nacido en una fecha anterior a una fecha especificado como parametro
 
-        System.out.println(jugadorRepository.findByFechaNacimientoBefore(LocalDate.of(1985, 6, 15)));
+        System.out.println(jugadorRepository.findByFechaNacimientoBefore(LocalDate.of(2000, 6, 15)));
 
         /*f. Agrupar los jugadores por la posicion del campo y devolver para cada grupo la siguiente informacion: la media de canastas,
                   la media de asistencias y rebotes */
@@ -218,7 +221,15 @@ public class JugadorService {
         for (Object[] aux_01:lista_02) {
             System.out.println("Media Canastas : " + aux_01[0] + " Maximo : " + aux_01[1] + " Minimo : " + aux_01[2] + " , Media Asistencias : " + aux_01[3] + " Maximo : " + aux_01[4] + " Minimo : " + aux_01[5] + " , Media Rebotes : " + aux_01[6] + " Maximo : " + aux_01[7] + " Minimo : " + aux_01[8]);
         }
-        return null;
+
+
+
+        /*EquipoService.java
+
+         b. Devuelve todos los jugadores de un equipo, a partir del nombre completo del equipo.*/
+
+
+
     }
 }
 
