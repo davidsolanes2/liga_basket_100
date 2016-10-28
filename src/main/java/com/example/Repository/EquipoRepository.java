@@ -24,7 +24,11 @@ public interface EquipoRepository extends JpaRepository<Equipo, Long>{
     @Query("select jug from Jugador jug where jug.equipo.nombreEquipo = :nombre")
     List<Jugador> findJugadorByNombreEquipo(@Param("nombre")String nombre);
 
-    @Query("select jug from Jugador jug where jug.equipo.nombreEquipo = :nombre and jug.posicion = :posicion")
-    List<Jugador> findJugadorByPosicion(@Param("nombre") String nombre, @Param("posicion") Posicion base);
+    @Query("select jug from Jugador jug where jug.equipo.nombreEquipo = :nombreEquipo and jug.posicion = :posicion")
+    List<Jugador> findJugadorByNombreEquipoPosicion(@Param("nombreEquipo") String nombre, @Param("posicion") Posicion posicion);
+
+    @Query("select jug.nombreJugador, jug.numCanastas from Jugador jug where jug.equipo.nombreEquipo = :nombreEquipo and jug.numCanastas = (select max(jug.numCanastas) from Jugador jug where jug.equipo.nombreEquipo= :nombreEquipo)") //revisar
+    //select jug.nombre_jugador, jug.num_canastas from Jugador jug where num_canastas = (select max(num_canastas) from Jugador);
+    List<Jugador>findJugadorByNombreEquipomaxNumCanastas(@Param("nombreEquipo") String nombre);
 
 }

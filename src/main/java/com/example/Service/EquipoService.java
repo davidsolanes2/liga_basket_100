@@ -8,6 +8,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.List;
+import java.util.Objects;
+
 /*
  * Created by dsg on 10/10/16.
  */
@@ -73,11 +76,13 @@ public class EquipoService {
 
         //c. Devuelve todos los jugadores de un equipo, que además jueguen en la misma posición (parámetro adicional de la consulta), por ejemplo, alero.
 
-        equipoRepository.findJugadorByPosicion("CAI Zaragoza", Posicion.Base).forEach(jug -> System.out.println("Posicion/Jugador : " + jug));
+        equipoRepository.findJugadorByNombreEquipoPosicion("CAI Zaragoza", Posicion.Alero).forEach(jug -> System.out.println("Posicion/Jugador : " + jug));
 
         //d. Devuelve el jugador que más canastas ha realizado de un equipo determinado como parámetro.
 
+        equipoRepository.findJugadorByNombreEquipomaxNumCanastas("Real Madrid").forEach(jug -> System.out.println("Jugador/Canastas : " + jug)); //revisar
 
+        //System.out.println(equipoRepository.findJugadorByNombreEquipomaxNumCanastas(equipo2));
 
     }
 }
