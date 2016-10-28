@@ -1,14 +1,12 @@
 package com.example.Service;
 
-import com.example.Model.Equipo;
+import com.example.Domain.Equipo;
+import com.example.Domain.Posicion;
 import com.example.Repository.EquipoRepository;
 import com.example.Repository.JugadorRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-
-import java.util.List;
-import java.util.Objects;
 
 /*
  * Created by dsg on 10/10/16.
@@ -64,8 +62,6 @@ public class EquipoService {
     }
 
     public void testEquipo(){
-        /* ---------------------------------------------------------------------------------------------------------------------*/
-
 
         //a. Consulta los equipos existentes en una localidad determinada.
 
@@ -75,12 +71,13 @@ public class EquipoService {
 
         equipoRepository.findJugadorByNombreEquipo("CAI Zaragoza").forEach(jug -> System.out.println("Equipo/Jugador : " + jug));
 
-
         //c. Devuelve todos los jugadores de un equipo, que además jueguen en la misma posición (parámetro adicional de la consulta), por ejemplo, alero.
 
-
+        equipoRepository.findJugadorByPosicion("CAI Zaragoza", Posicion.Base).forEach(jug -> System.out.println("Posicion/Jugador : " + jug));
 
         //d. Devuelve el jugador que más canastas ha realizado de un equipo determinado como parámetro.
+
+
 
     }
 }

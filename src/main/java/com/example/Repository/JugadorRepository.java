@@ -5,8 +5,8 @@ package com.example.Repository;
  */
 
 
-import com.example.Model.Jugador;
-import com.example.Model.Posicion;
+import com.example.Domain.Jugador;
+import com.example.Domain.Posicion;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;

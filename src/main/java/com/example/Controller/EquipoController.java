@@ -4,7 +4,7 @@ package com.example.Controller;
  * Created by dsg on 10/10/16.
  */
 
-import com.example.Model.Equipo;
+import com.example.Domain.Equipo;
 import com.example.Repository.EquipoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

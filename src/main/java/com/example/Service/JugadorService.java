@@ -1,7 +1,7 @@
 package com.example.Service;
 
-import com.example.Model.Jugador;
-import com.example.Model.Posicion;
+import com.example.Domain.Jugador;
+import com.example.Domain.Posicion;
 import com.example.Repository.EquipoRepository;
 import com.example.Repository.JugadorRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,8 +10,6 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.time.LocalDate;
 import java.util.List;
-
-import static jdk.nashorn.internal.objects.NativeArray.forEach;
 
 
 /*

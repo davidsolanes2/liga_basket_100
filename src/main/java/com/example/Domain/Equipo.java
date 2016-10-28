@@ -1,12 +1,10 @@
-package com.example.Model;
+package com.example.Domain;
 
 import com.sun.istack.internal.NotNull;
-import net.minidev.json.annotate.JsonIgnore;
+
 import javax.persistence.*;
 import java.time.LocalDate;
-import java.util.HashSet;
 import java.util.Objects;
-import java.util.Set;
 
 /*
  * Created by dsg on 10/10/16.

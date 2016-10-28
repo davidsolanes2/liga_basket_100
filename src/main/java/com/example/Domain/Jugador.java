@@ -1,4 +1,4 @@
-package com.example.Model;
+package com.example.Domain;
 
 import net.minidev.json.annotate.JsonIgnore;
 

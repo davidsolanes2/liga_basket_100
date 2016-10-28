@@ -4,7 +4,7 @@ package com.example.Controller;
  * Created by dsg on 10/10/16.
  */
 
-import com.example.Model.Jugador;
+import com.example.Domain.Jugador;
 import com.example.Repository.JugadorRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -37,7 +37,6 @@ public class JugadorController {
     @RequestMapping(method = GET)
     public List<Jugador>findAll() {
         List<Jugador> jugadors = new ArrayList<>();
-
         jugadors.addAll(jugadorRepository.findAll());
         return jugadors;
     }

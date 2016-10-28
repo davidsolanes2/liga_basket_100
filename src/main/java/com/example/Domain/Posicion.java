@@ -1,6 +1,4 @@
-package com.example.Model;
-
-import javax.persistence.*;
+package com.example.Domain;
 
 /*
  * Created by dsg on 10/10/16.
