@@ -112,7 +112,7 @@ public class JugadorService {
         jugador9.setNombreJugador("Jonas");
         jugador9.setFechaNacimiento(LocalDate.of(1993, 7, 19));
         jugador9.setNumAsistencias(39);
-        jugador9.setNumCanastas(40);
+        jugador9.setNumCanastas(45);
         jugador9.setNumRebotes(28);
         jugador9.setPosicion(Posicion.Pivot);
         jugador9.setEquipo(equipoRepository.findByNombreEquipo("Real Madrid"));
@@ -122,7 +122,7 @@ public class JugadorService {
         jugador10.setNombreJugador("Linhart, Nate");
         jugador10.setFechaNacimiento(LocalDate.of(1998, 7, 19));
         jugador10.setNumAsistencias(39);
-        jugador10.setNumCanastas(40);
+        jugador10.setNumCanastas(55);
         jugador10.setNumRebotes(28);
         jugador10.setPosicion(Posicion.Ala);
         jugador10.setEquipo(equipoRepository.findByNombreEquipo("CAI Zaragoza"));
@@ -132,7 +132,7 @@ public class JugadorService {
         jugador11.setNombreJugador("Henri, Sek");
         jugador11.setFechaNacimiento(LocalDate.of(1992, 7, 19));
         jugador11.setNumAsistencias(39);
-        jugador11.setNumCanastas(40);
+        jugador11.setNumCanastas(65);
         jugador11.setNumRebotes(28);
         jugador11.setPosicion(Posicion.Alero);
         jugador11.setEquipo(equipoRepository.findByNombreEquipo("CAI Zaragoza"));
@@ -152,7 +152,7 @@ public class JugadorService {
         jugador13.setNombreJugador("Pumprla, Pavel");
         jugador13.setFechaNacimiento(LocalDate.of(1996, 7, 19));
         jugador13.setNumAsistencias(39);
-        jugador13.setNumCanastas(40);
+        jugador13.setNumCanastas(104);
         jugador13.setNumRebotes(28);
         jugador13.setPosicion(Posicion.Ala);
         jugador13.setEquipo(equipoRepository.findByNombreEquipo("Movistar Estudiantes"));
@@ -162,7 +162,7 @@ public class JugadorService {
         jugador14.setNombreJugador("Kendall, Levon");
         jugador14.setFechaNacimiento(LocalDate.of(1993, 7, 19));
         jugador14.setNumAsistencias(39);
-        jugador14.setNumCanastas(40);
+        jugador14.setNumCanastas(75);
         jugador14.setNumRebotes(28);
         jugador14.setPosicion(Posicion.Ala);
         jugador14.setEquipo(equipoRepository.findByNombreEquipo("Movistar Estudiantes"));
@@ -172,7 +172,7 @@ public class JugadorService {
         jugador15.setNombreJugador("Fernandez, Jaime");
         jugador15.setFechaNacimiento(LocalDate.of(1995, 7, 19));
         jugador15.setNumAsistencias(39);
-        jugador15.setNumCanastas(40);
+        jugador15.setNumCanastas(115);
         jugador15.setNumRebotes(28);
         jugador15.setPosicion(Posicion.Alero);
         jugador15.setEquipo(equipoRepository.findByNombreEquipo("Movistar Estudiantes"));

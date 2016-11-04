@@ -4,7 +4,9 @@ import com.sun.istack.internal.NotNull;
 
 import javax.persistence.*;
 import java.time.LocalDate;
+import java.util.HashSet;
 import java.util.Objects;
+import java.util.Set;
 
 /*
  * Created by dsg on 10/10/16.
@@ -28,9 +30,9 @@ public class Equipo {
     @Column(name = "fecha_creacion")
     private LocalDate fechaCreacion;
 
-    /*
+
     @OneToMany(mappedBy = "equipo")
-    private Set<Jugador> jugador = new HashSet<>();*/
+    private Set<Jugador> jugador = new HashSet<>();
 
     //@JsonIgnore
     //@ManyToMany(mappedBy = "equipos")
@@ -79,10 +81,10 @@ public class Equipo {
         this.fechaCreacion = fechaCreacion;
     }
 
-    /*public Set<Jugador>getJugador() { return jugador; }
+    public Set<Jugador>getJugador() { return jugador; }
 
     public void setJugador(Set<Jugador> jugador) { this.jugador = jugador; }
-*/
+
 
     @Override
     public boolean equals(Object o) {

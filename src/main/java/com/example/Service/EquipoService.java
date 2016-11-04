@@ -68,7 +68,7 @@ public class EquipoService {
 
         //a. Consulta los equipos existentes en una localidad determinada.
 
-        System.out.println(equipoRepository.findEquipoByLocalidad("Zaragoza"));
+        System.out.println(equipoRepository.findEquipoByLocalidad("Madrid"));
 
         //b. Devuelve todos los jugadores de un equipo, a partir del nombre completo del equipo.
 
@@ -80,9 +80,9 @@ public class EquipoService {
 
         //d. Devuelve el jugador que más canastas ha realizado de un equipo determinado como parámetro.
 
-        equipoRepository.findJugadorByNombreEquipomaxNumCanastas("Real Madrid").forEach(jug -> System.out.println("Jugador/Canastas : " + jug)); //revisar
+        //equipoRepository.findJugadorByNombreEquipomaxNumCanastas("Real Madrid").forEach(jug -> System.out.println("Jugador/Canastas : " + jug)); //revisar
 
-        //System.out.println(equipoRepository.findJugadorByNombreEquipomaxNumCanastas(equipo2));
+        //System.out.println(equipoRepository.findJugadorByNombreEquipomaxNumCanastas("Barcelona"));
 
     }
 }
