@@ -4,6 +4,7 @@ import com.example.Domain.Equipo;
 import com.example.Domain.Posicion;
 import com.example.Repository.EquipoRepository;
 import com.example.Repository.JugadorRepository;
+import org.hibernate.annotations.SourceType;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -80,9 +81,10 @@ public class EquipoService {
 
         //d. Devuelve el jugador que más canastas ha realizado de un equipo determinado como parámetro.
 
-        //equipoRepository.findJugadorByNombreEquipomaxNumCanastas("Real Madrid").forEach(jug -> System.out.println("Jugador/Canastas : " + jug)); //revisar
-
-        //System.out.println(equipoRepository.findJugadorByNombreEquipomaxNumCanastas("Barcelona"));
+        List<Object[]> aux = equipoRepository.findMaxJugadorEquipo("Real Madrid");
+        for (Object[] auxiliar: aux) {
+            System.out.println("Nombre: "+auxiliar[0]+", equipo: "+auxiliar[1]);
+        }
 
     }
 }

@@ -8,10 +8,14 @@ import com.example.Domain.Equipo;
 import com.example.Repository.EquipoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
+import org.springframework.test.annotation.Timed;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 import static org.springframework.web.bind.annotation.RequestMethod.GET;
 import static org.springframework.web.bind.annotation.RequestMethod.POST;
@@ -53,5 +57,14 @@ public class EquipoController {
         Equipo e = equipoRepository.findOne(id);
         if (e == equipo) return null;
         return equipoRepository.save(equipo);
+    }
+
+    @RequestMapping(value = "/{id}", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
+    @Timed(millis = 1000)
+    public ResponseEntity<Equipo>getEquipo(@PathVariable Long id) {
+        Equipo equipo = equipoRepository.findOne(id);
+        return Optional.ofNullable(equipo)
+                .map(result-> new ResponseEntity<>(result, HttpStatus.OK))
+                .orElse(new ResponseEntity<Equipo>(HttpStatus.NOT_FOUND));
     }
 }
